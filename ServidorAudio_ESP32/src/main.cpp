@@ -36,7 +36,7 @@
 #define I2S_PORT           I2S_NUM_0 // I2S port number (0)
 #define SAMPLE_BUFFER_SIZE 1024      // Tamaño del buffer de muestras (1024)
 #define I2S_SAMPLE_RATE    (16000)   // Frecuencia de muestreo (16 kHz)
-#define RECORD_TIME        (10)      // segundos de grabación 
+#define RECORD_TIME        (20)      // segundos de grabación 
 
 // Credenciales de la red WiFi
 const char* ssid = "Red";         // Reemplaza con el nombre de tu red WiFi

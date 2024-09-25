@@ -9,6 +9,7 @@
   "author": "Felipe Grajales",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.21.0"
+    "express": "^4.21.0",
+    "morgan": "^1.10.0"
   }
 }
