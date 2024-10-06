@@ -43,7 +43,7 @@ const char* ssid = "Red";         // Reemplaza con el nombre de tu red WiFi
 const char* password = "Felipe1701";   // Reemplaza con tu contraseña WiFi
 
 // Servidor HTTP (IP y puerto)
-const char* serverName = "192.168.173.146";
+const char* serverName = "192.168.179.146";
 const int port = 8888;
 
 // Constantes para la cabecera del archivo WAV
