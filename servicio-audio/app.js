@@ -1,6 +1,7 @@
 const express = require('express');
 const morgan = require('morgan');
 const fs = require('fs');
+const { exec } = require('child_process');  // Importar el módulo para ejecutar comandos
 
 const app = express();
 const port = 8888;
@@ -15,8 +16,23 @@ app.use(express.raw({ type: 'audio/wav', limit: '50mb' }));
 app.post('/uploadAudio', (req, res) => {
     const audioData = req.body;
     console.log(`Recibido audio con tamaño: ${audioData.length}`);
-    fs.writeFileSync('audio_received.wav', audioData);
-    res.send('Audio recibido con éxito');
+
+    // Guardar el archivo de audio recibido
+    const audioPath = 'audio_received.wav';
+    fs.writeFileSync(audioPath, audioData);
+
+    // Ejecutar el script de Python para procesar el archivo
+    //C:\Users\KYTIA\Repositorio_Proyecto_Grupal\pruebaaudio2.py
+    exec(`python script.py ${audioPath}`, (error, stdout, stderr) => {
+        if (error) {
+            console.error(`Error ejecutando el script de Python: ${error}`);
+            return res.status(500).send('Error al procesar el audio');
+        }
+
+        // Si todo va bien, enviar la salida del script de Python
+        console.log(`Salida del script: ${stdout}`);
+        res.send('Audio recibido y procesado con éxito');
+    });
 });
 
 // Middleware de manejo de errores

@@ -46,8 +46,10 @@ def analizar_archivo_wav(ruta_archivo):
 
 # Verificar si el archivo de audio se pasa como argumento
 if len(sys.argv) > 1:
-    ruta_archivo = sys.argv[1]  # Obtener la ruta del archivo desde el argumento
+    ruta_archivo = "audio_received.wav"  # Obtener la ruta del archivo desde el argumento
     # Llamada a la función para analizar el archivo
     analizar_archivo_wav(ruta_archivo)
 else:
     print("Se debe pasar la ruta del archivo de audio WAV como argumento.")
+
+#analizar_archivo_wav("prueba.wav")

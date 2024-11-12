@@ -36,14 +36,14 @@
 #define I2S_PORT           I2S_NUM_0 // I2S port number (0)
 #define SAMPLE_BUFFER_SIZE 1024      // Tamaño del buffer de muestras (1024)
 #define I2S_SAMPLE_RATE    (16000)   // Frecuencia de muestreo (16 kHz)
-#define RECORD_TIME        (20)      // segundos de grabación 
+#define RECORD_TIME        (10)      // segundos de grabación 
 
 // Credenciales de la red WiFi
-const char* ssid = "Red";         // Reemplaza con el nombre de tu red WiFi
-const char* password = "Felipe1701";   // Reemplaza con tu contraseña WiFi
+const char* ssid = "FLIA-VALDERRAMA";         // Reemplaza con el nombre de tu red WiFi
+const char* password = "Fljvkm0208";   // Reemplaza con tu contraseña WiFi
 
 // Servidor HTTP (IP y puerto)
-const char* serverName = "192.168.179.146";
+const char* serverName = "192.168.1.10"; //172.31.44.73 //13.60.171.68
 const int port = 8888;
 
 // Constantes para la cabecera del archivo WAV
@@ -201,6 +201,7 @@ void micTask(void* parameter) {
     }
     
     // Leer muestras de audio del micrófono y enviarlas al servidor
+    Serial.println("Empezando a grabar..");
     for(int j = 0; j < numBuffers; j++ ){
         // Leer muestras de audio del micrófono (I2S) y enviarlas al servidor (HTTP) 
         // un total de SAMPLE_BUFFER_SIZE veces es decir 1024 veces ya que el buffer es de 1024 muestras de 32 bits

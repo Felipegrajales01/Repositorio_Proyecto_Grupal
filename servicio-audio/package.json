@@ -1,15 +1,16 @@
 {
-  "name": "servicio-audio",
+  "dependencies": {
+    "express": "^4.21.1",
+    "morgan": "^1.10.0"
+  },
+  "name": "audioservice",
   "version": "1.0.0",
-  "description": "Servicio de recepcion de archivos de audio wav",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Felipe Grajales",
-  "license": "MIT",
-  "dependencies": {
-    "express": "^4.21.0",
-    "morgan": "^1.10.0"
-  }
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
