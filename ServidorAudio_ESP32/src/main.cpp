@@ -28,9 +28,9 @@
 #include "WiFi.h"
 
 // Definición de pines para el micrófono INMP441
-#define I2S_SCK_PIN  18             // Pin Serial Clock (SCK) 
-#define I2S_WS_PIN   15             // Pin Word Select (WS)
-#define I2S_SD_PIN   13             // Pin Serial Data (SD)
+#define I2S_SCK_PIN  13             // Pin Serial Clock (SCK) 
+#define I2S_WS_PIN   12             // Pin Word Select (WS)
+#define I2S_SD_PIN   14             // Pin Serial Data (SD)
 
 // Configuración del driver I2S para el micrófono INMP441
 #define I2S_PORT           I2S_NUM_0 // I2S port number (0)
@@ -43,7 +43,7 @@ const char* ssid = "FLIA-VALDERRAMA";         // Reemplaza con el nombre de tu r
 const char* password = "Fljvkm0208";   // Reemplaza con tu contraseña WiFi
 
 // Servidor HTTP (IP y puerto)
-const char* serverName = "192.168.1.10"; //172.31.44.73 //13.60.171.68
+const char* serverName = "192.168.43.29"; //172.31.44.73 //13.60.171.68
 const int port = 8888;
 
 // Constantes para la cabecera del archivo WAV
